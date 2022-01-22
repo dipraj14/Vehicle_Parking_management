@@ -1,0 +1,56 @@
+{% load static %}
+<header style="background-color: rgb(72,72,72);" class="header-desktop">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="header-wrap">
+                            <form class="form-header" name="search" action="{% url 'search'%}">
+                                <input class="au-input au-input--xl" type="text" name="searchdata" id="searchdata" placeholder="Enter Parking Number and search..." />
+                                <button class="btn btn-success" type="submit">
+                                Search
+                                </button>
+                            </form>
+                            <div class="header-button">
+                                <div class="noti-wrap">
+                                </div>
+                                <div class="account-wrap">
+                                    <div class="account-item clearfix js-item-menu">
+                                        <div class="image">
+                                            <img src="{% static 'images/icon/images.jpg' %}" alt="Admin" />
+                                        </div>
+                                        <div class="content">
+                                            <a class="js-acc-btn" href="#" style="color: white;">{{request.user.username}}</a>
+                                        </div>
+
+                                        <div class="account-dropdown js-dropdown">
+                                            <div class="info clearfix" style="background-color:blue;">
+                                                <div class="image">
+                                                    <a href="#">
+                                                        <img src="{% static 'images/icon/images.jpg' %}" alt="Admin" />
+                                                    </a>
+                                                </div>
+                                                <div class="content">
+                                                    <h5 class="name">
+                                                        <a href="#">{{request.user.username}}</a>
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                            <div class="account-dropdown__body" style="background-color:yellow;">
+
+                                                <div class="account-dropdown__item">
+                                                    <a href="{% url 'changepassword' %}">
+                                                        <i class="zmdi zmdi-settings"></i>Change Password</a>
+                                                </div>
+                                            </div>
+                                            <div class="account-dropdown__footer" style="background-color:red;">
+                                                <a href="{% url 'logout' %}">
+                                                    <i class="zmdi zmdi-power"></i>Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </header>

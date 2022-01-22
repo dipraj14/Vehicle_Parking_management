@@ -1,0 +1,50 @@
+<aside class="menu-sidebar d-none d-lg-block">
+    <div class="logo">
+
+        <h3>
+            <img src="static\images\icon\thecarpark.png" alt="VPM" width="180px">
+        </h3>
+    </div>
+    <div style="background-color: rgb(24,0,0);" class="menu-sidebar__content js-scrollbar1">
+        <nav class="navbar-sidebar">
+            <ul class="list-unstyled navbar__list">
+                <li>
+                    <a href="{% url 'admin_home' %}">
+                        <i class="fa fa-desktop"></i>Dashboard</a>
+                </li>
+
+                <li>
+                    <a href="{% url 'add_category' %}">
+                        <i class="fa fa-list-alt"></i>Add vechicle type</a>
+                </li>
+                <li>
+                    <a href="{% url 'manage_category' %}">
+                        <i class="fa fa-list"></i>Manage Category</a>
+                </li>
+
+
+                <li>
+                    <a href="{% url 'add_vehicle' %}">
+                        <i class="fa fa-car"></i>Add Vehicle</a>
+                </li>
+                <li>
+                    <a href="{% url 'manage_incomingvehicle' %}">
+                        <i class="fa fa-motorcycle"></i>Manage Incomeing Vehicle</a>
+                </li>
+
+                <li>
+                    <a href="{% url 'manage_outgoingvehicle' %}">
+                        <i class="fa fa-cab"></i>Manage Outgoing Vehicle</a>
+                </li>
+
+
+
+                <li>
+                    <a href="{% url 'betweendate_report' %}">
+                        <i class="fas fa-group"></i>Vistors B/w Dates</a>
+                </li>
+
+            </ul>
+        </nav>
+    </div>
+</aside>
